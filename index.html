@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Draggy.js - A lightweight Drag and drop JS library!</title>
+    <link href="./src/draggy.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="drag" id="drag.1">Hello!</div>
+    <div class="drag:container" id="drag.container.1"></div>
+    <script src="./src/draggy.js"></script>
+    <script>
+      new Draggy({
+        element: document.getElementById("drag.1"),
+        container: document.getElementById("drag.container.1"),
+				containerHoverClass: "drag:container:hover",
+        options: {
+          callbacks: {
+            DragStart(el) {
+              console.log("Drag start");
+            },
+            DragEnd(el) {
+              console.log("Drag end");
+            },
+            // DragOver() {console.log("Drag over");},
+            DragEnter(el) {
+              console.log("Drag enter");
+            },
+            DragLeave(el) {
+              console.log("Drag leave");
+            },
+            DragSuccess(el) {
+							console.log(el.id)
+              console.log("Success!");
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

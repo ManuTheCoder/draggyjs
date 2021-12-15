@@ -1,0 +1,27 @@
+* {
+  box-sizing:border-box;
+  font-family: Roboto;
+}
+.drag {
+  pointer-events: auto;
+  padding: 10px;
+  border: 2px solid #aaa;
+  opacity: 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  cursor: grab;
+}
+.drag\:container {
+  padding: 15px 10px;
+  width:100%;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin-top: 50px;
+  box-shadow: 0 0 50px #ccc
+}
+
+.drag\:container\:hover {
+  background:#ddd;
+  border-color:#404040
+}
